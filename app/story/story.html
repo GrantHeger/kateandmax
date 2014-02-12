@@ -1,0 +1,52 @@
+﻿<section id="story-view" data-ng-controller="story as vm">
+    <section class="matter mainContent">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="widget wfallorange span7">
+                    <div data-cc-widget-header title="About Us"></div>
+                    <div class="widget-content text-center text-info" >
+                        <h4>
+                                We met on January 7th, 2012.  Max is a firefighter/paramedic for the Indianapolis Fire Department, and Kate is a paramedic for Indianapolis Emergency Medical Services.  It has been a wonderful 2 years together. <br /><br />Both of us share a love of animals. ‎Max has two superb dogs, Ajax and Isis; Kate has a tiny cat, Posey, and a much larger horse, Devon.  <br /><br />On December 16th, 2013, we became engaged. We hope to share many more memories together, and hope to see you on November 8th to begin a new stage in our lives.
+                        </h4>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="widget wfallorange span5" allow-collapse="false">
+                    <div data-cc-widget-header></div>
+                    <div class="widget-content text-center text-info">
+                        <!--  Carousel - consult the Twitter Bootstrap docs at
+    http://twitter.github.com/bootstrap/javascript.html#carousel -->
+                        <div id="this-carousel-id" class="carousel slide">
+                            <!-- class of slide for animation -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <!-- class of active since it's the first item -->
+                                    <img src="http://answerphoto.com/kateandmax/content/images/mk1.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="http://answerphoto.com/kateandmax/content/images/mk2.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="http://answerphoto.com/kateandmax/content/images/mk3.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="http://answerphoto.com/kateandmax/content/images/mk4.jpg" alt="" />
+                                </div>
+                            </div><!-- /.carousel-inner -->
+                            <!--  Next and Previous controls below
+              href values must reference the id for this carousel -->
+                            <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+                            <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+                        </div><!-- /.carousel -->
+                        <script>
+                            $(document).ready(function () {
+                                $('.carousel').carousel();
+                            });
+                        </script>
+                    </div>
+            </div>
+        </div>
+    </section>
+</section>

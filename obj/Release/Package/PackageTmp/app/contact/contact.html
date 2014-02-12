@@ -1,0 +1,131 @@
+﻿<section id="contact-view" data-ng-controller="contact as vm">
+    <section class="matter mainContent">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="widget wfallgray span4">
+                    <div data-cc-widget-header title="Restaurants"></div>
+                    <div class=" center">
+                        <div class="widget wfallgray">
+                            <div data-cc-widget-header title="Featured"
+                                 allow-collapse="false"></div>
+                            <div class="widget-content text-center text-info">
+                                <small>Click a logo to check out their website and details</small>
+                                <a href="http://www.yatscajuncreole.com/" title="Yats Cagun and Creole" target="_blank"><img src="http://answerphoto.com/kateandmax/content/images/yats.png" style="height: 75px" /></a>
+                                <a href="http://www.tortasguicho.com/" title="Tortas Guicho Dominguez y el Cubanito" target="_blank"><img src="http://answerphoto.com/kateandmax/content/images/tortasguicho.png" style="height: 75px" /></a>
+                                <a href="http://www.mojoecoffeehouse.com/" title="Mo'Joe Coffee House" target="_blank"><img src="http://answerphoto.com/kateandmax/content/images/mojoe.png" style="height: 75px" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" center">
+                        <div class="widget wfallgray">
+                            <div data-cc-widget-header title="More Places to check out"
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info hide">
+                                <table class="table table-condensed table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Restaurant</th>
+                                            <!--<th>Address</th>-->
+                                            <th>Website</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-ng-repeat="p in vm.restaurants">
+                                            <td><b>{{p.restaurant}}</b></td>
+                                            <!--<td>{{p.address}}</td>-->
+                                            <td><a href="{{p.website}}" target="_blank">Click</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--<a href="http://www.barcelonatapas.com/" target="_blank">Barcelona Tapas</a><br />
+                                <a href="http://www.maxineschicken.com/main.htm" target="_blank">Maxine's Chicken and Waffles</a><br />
+                                <a href="http://www.bakersfieldmassave.com/" target="_blank">Bakersfield Mass Ave.</a><br />
+                                <a href="http://www.bruburgerbar.com/" target="_blank">Bru Burger</a><br />
+                                <a href="http://www.cfcoffeecompany.com/" target="_blank">Calvin Fletcher's Coffee Company</a><br />-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget wfallgray span4">
+                    <div data-cc-widget-header title="Contact"></div>
+                    <div class=" center">
+                        <div class="widget wfallgray">
+                            <div data-cc-widget-header title="Featured"
+                                 allow-collapse="false"></div>
+                            <div class="widget-content text-center text-info">
+                                <small>Click a logo to check out their website and details</small>
+                                <a href="http://www.childrensmuseum.org/" title="Childrens Museum" target="_blank"><img src="http://answerphoto.com/kateandmax/content/images/childrensmuseum.png" style="height: 75px" /></a>
+                                <a href="http://www.newdaymeadery.com/" title="New Day Meadery" target="_blank"><img src="http://answerphoto.com/kateandmax/content/images/newdaymeadery.png" style="height: 75px" /></a>
+                                <a href="http://www.eiteljorg.org/" title="Eiteljorg Museum of American Indians and Western Art" target="_blank"><img src="http://answerphoto.com/kateandmax/content/images/eiteljorg.png" style="height: 75px" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" center">
+                        <div class="widget wfallgray">
+                            <div data-cc-widget-header title="More Places to check out"
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info hide">
+                                <table class="table table-condensed table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Place</th>
+                                            <!--<th>Address</th>-->
+                                            <th>Website</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-ng-repeat="p in vm.places">
+                                            <td><b>{{p.place}}</b></td>
+                                            <!--<td>{{p.address}}</td>-->
+                                            <td><a href="{{p.website}}" target="_blank">Click</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--<a href="http://www.indianapolismotorspeedway.com/" target="_blank">Indianapolis Motor Speedway</a><br />
+                                <a href="http://www.indyzoo.com/SitePages/home.aspx" target="_blank">Indianapolis Zoo</a><br />
+                                <a href="http://www.indy.gov/eGov/City/DPS/IFD/History/Pages/museum.aspx" target="_blank">Indianaplis Firefighters Museum</a><br />
+                                <a href="http://www.indianamuseum.org/" target="_blank">Indiana State Museum</a><br />
+                                <a href="http://www.ncaahallofchampions.org/index.php" target="_blank">NCAA Hall of Champions</a><br />
+                                <a href="http://www.sunkingbrewing.com/" target="_blank">Sun King Brewery</a><br />
+                                <a href="http://flat12.me/" target="_blank">Flat 12 Bierwerks</a><br />
+                                <a href="http://www.easleywinery.com/" target="_blank">Easley Winery</a><br />
+                                <a href="http://www.fountainsquareindy.com/bowling/" target="_blank">Atomic Bowl Duckpin</a><br />
+                                <a href="http://fountainsquarebrewery.com/" target="_blank">Fountain Square Brewery</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget wfallgray span4">
+                    <div data-cc-widget-header title="Hotels"></div>
+                    <div class=" center">
+                        <div class="widget wfallgray">
+                            <div data-cc-widget-header title="Hotel 1"
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info">
+                                <small>Image and text</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" center">
+                        <div class="widget wfallgray">
+                            <div data-cc-widget-header title="Hotel 2"
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info hide">
+                                <small>Image and text</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" center">
+                        <div class="widget wfallgray">
+                            <div data-cc-widget-header title="Hotel 3"
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info hide">
+                                <small>Image and text</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

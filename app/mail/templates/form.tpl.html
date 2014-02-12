@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        .ng-hide {
+            display: none !important;
+        }
+
+        span {
+            display: none;
+            /*width: 400px;
+            height: 100px;
+            margin-top: -50px;*/
+        }
+    </style>
+    <title data-ng-bind="title">Kate and Max</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+    <script>
+        // Must be first. IE10 mobile viewport fix
+        if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            var mq = "@-ms-viewport{width:auto!important}";
+            msViewportStyle.appendChild(document.createTextNode(mq));
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+    </script>
+
+    <link href="../../content/ie10mobile.css" rel="stylesheet" />
+    <link href="../../content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../content/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../content/toastr.css" rel="stylesheet" />
+    <link href="../../content/customtheme.css" rel="stylesheet" />
+    <link href="../../content/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="../../content/grant.css" rel="stylesheet" />
+    <link href="../../content/styles.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header class="clearfix">
+        <div data-ng-include="'../layout/topnav_mail.html'"></div>
+    </header>
+    <section id="content" class="content">
+        <section class="matter mainContent">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span3"></div>
+                    <div class="widget wfallgray span6">
+                        <div title="Our Registry"></div>
+                        <div class="widget-content text-center text-info">
+                            <!-- Display form -->
+                            <if name="display_form">
+                                <form action="{script_self}" method="post">
+                                    <input type="hidden" name="required_fields" value="lastname, email, subject" />
+                                    <input type="hidden" name="email_fields" value="email" />
+                                    <input type="hidden" name="html_template" value="form.tpl.html" />
+                                    <input type="hidden" name="mail_template" value="mail.tpl.txt" />
+                                    <input type="hidden" name="thanks" value="http://kateandmax.net/success.html" />
+                                    <!-- <input type="hidden" name="error_page" value="./docu/error.html" /> -->
+                                    <input type="hidden" name="limit_error_page" value="./docu/thanks.html" />
+                                    <h5>Have a question or comment for us? Let us know!</h5><br />
+                                    <table border="0" cellpadding="3" cellspacing="0" style="width:90%; margin-right:auto; margin-left:auto;">
+                                        <tr valign="top">
+                                            <td>{txt_firstname}</td>
+                                            <td></td>
+                                            <td><input type="Text" name="firstname" value="{firstname}" size="40" placeholder="Your First Name"/></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td>{txt_lastname} *</td>
+                                            <td></td>
+                                            <td>
+                                                <input type="Text" name="lastname" value="{lastname}" size="40" placeholder="Your Last Name"/>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td>{txt_email} *</td>
+                                            <td></td>
+                                            <td>
+                                                <input type="Text" name="email" value="{email}" size="40" ng-model="user.email" placeholder="you@example.com" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">{txt_subject} *</td>
+                                            <td></td>
+                                            <td>
+                                                <input type="Text" name="subject" value="{subject}" size="40" placeholder=" Where is it?"/>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td>{txt_comment}</td>
+                                            <td></td>
+                                            <td><textarea name="comment" rows="5" placeholder="ex. Hey there!">{comment}</textarea></td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <table>
+                                        <tr valign="bottom">
+                                            <p>* = {txt_mandatory_fields} (if you don't put these in correctly it won't go through!)</p>
+                                        </tr>
+                                        <tr valign="top">
+                                                <input type="submit" name="send" value="{txt_submit}" />
+                                        </tr>
+                                    </table>
+                                </form>
+                            </if>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3"></div>
+            </div>
+            </div>
+        </section>
+    </section>
+
+        <!-- Vendor Scripts -->
+        <script src="../../scripts/jquery-2.0.3.js"></script>
+        <script src="../../scripts/angular.js"></script>
+        <script src="../../scripts/angular-animate.js"></script>
+        <script src="../../scripts/angular-route.js"></script>
+        <script src="../../scripts/angular-sanitize.js"></script>
+        <script src="../../scripts/bootstrap.js"></script>
+        <script src="../../scripts/toastr.js"></script>
+        <script src="../../scripts/moment.js"></script>
+        <script src="../../scripts/ui-bootstrap-tpls-0.7.0.js"></script>
+        <script src="../../scripts/spin.js"></script>
+        <script src="../../scripts/jquery.backstretch.min.js"></script>
+
+        <!-- Bootstrapping -->
+        <script src="../../app/app.js"></script>
+        <script src="../../app/config.js"></script>
+        <script src="../../app/config.exceptionHandler.js"></script>
+        <script src="../../app/config.route.js"></script>
+
+        <!-- common Modules -->
+        <script src="../../app/common/common.js"></script>
+        <script src="../../app/common/logger.js"></script>
+        <script src="../../app/common/spinner.js"></script>
+
+        <!-- common.bootstrap Modules -->
+        <script src="../../app/common/bootstrap/bootstrap.dialog.js"></script>
+
+        <!-- app -->
+        <script src="../../app/story/story.js"></script>
+        <script src="../../app/dashboard/dashboard.js"></script>
+        <script src="../../app/attractions/attractions.js"></script>
+        <script src="../../app/contact/contact.js"></script>
+        <script src="../../app/registry/registry.js"></script>
+        <script src="../../app/layout/shell.js"></script>
+        <script src="../../app/layout/sidebar.js"></script>
+        <script src="../../app/layout/topnav.js"></script>
+
+        <!-- app Services -->
+        <script src="../../app/services/datacontext.js"></script>
+        <script src="../../app/services/directives.js"></script>
+        <script>
+            //// To attach Backstrech as the body's background
+            //$.backstretch("http://answerphoto.com/kateandmax/content/images/leavessky.jpg");
+
+            //// You may also attach Backstretch to a block-level element
+            //$(".foo").backstretch("path/to/image.jpg");
+
+            // or, to start a slideshow, just pass in an array of images
+            $.backstretch([
+              "http://answerphoto.com/kateandmax/content/images/leavesgrove.jpg",
+              "http://answerphoto.com/kateandmax/content/images/leavessky.jpg"
+            ], { duration: 6000, fade: 750 });
+        </script>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

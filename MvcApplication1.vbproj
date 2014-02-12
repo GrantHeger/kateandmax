@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85FB2ED3-AD6B-4CB7-8A8A-500C760F457E}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MvcApplication1</RootNamespace>
+    <AssemblyName>MvcApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>MvcApplication1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>MvcApplication1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Web.Mvc.Ajax" />
+    <Import Include="System.Web.Mvc.Html" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="App_Start\WebApiConfig.vb" />
+    <Content Include="app\contact\contact.html" />
+    <Content Include="app\contact\contact.js" />
+    <Content Include="app\layout\topnav_mail.html" />
+    <Content Include="app\layout\topnav_mail.js" />
+    <Content Include="app\mail\docu\docu_formmail_de.html" />
+    <Content Include="app\mail\docu\docu_formmail_en.html" />
+    <Content Include="app\mail\docu\error.html" />
+    <Content Include="app\mail\docu\image\image001-de.gif" />
+    <Content Include="app\mail\docu\image\image001-en.gif" />
+    <Content Include="app\mail\docu\index.html" />
+    <Content Include="app\mail\docu\thanks.html" />
+    <Content Include="app\mail\inc\attach_mail_variables.class.inc.php" />
+    <Content Include="app\mail\inc\captcha.inc.php" />
+    <Content Include="app\mail\inc\config.dat.php" />
+    <Content Include="app\mail\inc\formmail.class.inc.php" />
+    <Content Include="app\mail\inc\formmail.inc.php" />
+    <Content Include="app\mail\inc\functions.inc.php" />
+    <Content Include="app\mail\inc\garbage_collector.class.inc.php" />
+    <Content Include="app\mail\inc\lib\clsUpload.php" />
+    <Content Include="app\mail\inc\lib\Contact_Vcard_Build.php" />
+    <Content Include="app\mail\inc\lib\File\IMC.php" />
+    <Content Include="app\mail\inc\lib\File\IMC\Build.php" />
+    <Content Include="app\mail\inc\lib\File\IMC\Build\vCard.php" />
+    <Content Include="app\mail\inc\lib\File\IMC\Parse.php" />
+    <Content Include="app\mail\inc\lib\File\IMC\Parse\vCalendar.php" />
+    <Content Include="app\mail\inc\lib\File\IMC\Parse\vCard.php" />
+    <Content Include="app\mail\inc\lib\Find.php" />
+    <Content Include="app\mail\inc\lib\htmlMimeMail.php" />
+    <Content Include="app\mail\inc\lib\Image\Text.php" />
+    <Content Include="app\mail\inc\lib\mimePart.php" />
+    <Content Include="app\mail\inc\lib\PEAR.php" />
+    <Content Include="app\mail\inc\lib\PEAR5.php" />
+    <Content Include="app\mail\inc\lib\RFC822.php" />
+    <Content Include="app\mail\inc\lib\smtp.php" />
+    <Content Include="app\mail\inc\lib\Text\CAPTCHA.php" />
+    <Content Include="app\mail\inc\lib\Text\CAPTCHA\Driver\Image.php" />
+    <Content Include="app\mail\inc\lib\Text\Password.php" />
+    <Content Include="app\mail\inc\mail_input_validation.class.inc.php" />
+    <Content Include="app\mail\inc\template.class.inc.php" />
+    <Content Include="app\mail\inc\template.ext.class.inc.php" />
+    <Content Include="app\mail\index.php" />
+    <Content Include="app\mail\installation.txt" />
+    <Content Include="app\mail\languages\language.cat.inc.php" />
+    <Content Include="app\mail\languages\language.da.inc.php" />
+    <Content Include="app\mail\languages\language.de.inc.php" />
+    <Content Include="app\mail\languages\language.en.inc.php" />
+    <Content Include="app\mail\languages\language.es.inc.php" />
+    <Content Include="app\mail\languages\language.fr.inc.php" />
+    <Content Include="app\mail\languages\language.hu.inc.php" />
+    <Content Include="app\mail\languages\language.it.inc.php" />
+    <Content Include="app\mail\languages\language.nl.inc.php" />
+    <Content Include="app\mail\languages\language.no.inc.php" />
+    <Content Include="app\mail\languages\language.pt.inc.php" />
+    <Content Include="app\mail\languages\language.pt_br.inc.php" />
+    <Content Include="app\mail\languages\language.ro.inc.php" />
+    <Content Include="app\mail\languages\language.ru.inc.php" />
+    <Content Include="app\mail\languages\language.sv.inc.php" />
+    <Content Include="app\mail\languages\language.tr.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.ar.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.cat.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.da.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.de.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.en.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.es.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.fr.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.hu.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.it.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.nl.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.no.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.pt.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.pt_br.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.ro.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.ru.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.sv.inc.php" />
+    <Content Include="app\mail\languages\utf-8\language.tr.inc.php" />
+    <Content Include="app\mail\templates\form.tpl - Copy.html" />
+    <Content Include="app\mail\templates\form.tpl.html" />
+    <Content Include="app\mail\templates\mail.tpl.txt" />
+    <Content Include="app\registry\registry.html" />
+    <Content Include="app\registry\registry.js" />
+    <Content Include="app\attractions\attractions.html" />
+    <Content Include="app\attractions\attractions.js" />
+    <Content Include="app\story\story.html" />
+    <Content Include="app\story\story.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\common\bootstrap\bootstrap.dialog.js" />
+    <Content Include="app\common\common.js" />
+    <Content Include="app\common\logger.js" />
+    <Content Include="app\common\spinner.js" />
+    <Content Include="app\config.exceptionHandler.js" />
+    <Content Include="app\config.js" />
+    <Content Include="app\config.route.js" />
+    <Content Include="app\dashboard\dashboard.html" />
+    <Content Include="app\dashboard\dashboard.js" />
+    <Content Include="app\layout\shell.html" />
+    <Content Include="app\layout\shell.js" />
+    <Content Include="app\layout\topnav.js" />
+    <Content Include="app\layout\sidebar.html" />
+    <Content Include="app\layout\sidebar.js" />
+    <Content Include="app\layout\topnav.html" />
+    <Content Include="app\layout\widgetheader.html" />
+    <Content Include="app\services\datacontext.js" />
+    <Content Include="app\services\directives.js" />
+    <Content Include="content\bootstrap-responsive.css" />
+    <Content Include="content\bootstrap-responsive.min.css" />
+    <Content Include="content\bootstrap.css" />
+    <Content Include="content\bootstrap.min.css" />
+    <Content Include="content\grant.css" />
+    <Content Include="content\customtheme.css" />
+    <Content Include="content\font-awesome-ie7.css" />
+    <Content Include="content\font-awesome-ie7.min.css" />
+    <Content Include="content\font-awesome.css" />
+    <Content Include="content\font-awesome.min.css" />
+    <Content Include="content\font\fontawesome-webfont.svg" />
+    <Content Include="content\ie10mobile.css" />
+    <Content Include="content\images\AngularJS-small.png" />
+    <Content Include="content\images\breezelogo.png" />
+    <Content Include="content\images\childrensmuseum.png" />
+    <Content Include="content\images\eiteljorg.png" />
+    <Content Include="content\images\forest2.jpg" />
+    <Content Include="content\images\forest2.png" />
+    <Content Include="content\images\glyphicons-halflings-white.png" />
+    <Content Include="content\images\glyphicons-halflings.png" />
+    <Content Include="content\images\icon.png" />
+    <Content Include="content\images\leavesgrove.jpg" />
+    <Content Include="content\images\leavesgrove2.jpg" />
+    <Content Include="content\images\leavess2ky.jpg" />
+    <Content Include="content\images\leavessky.jpg" />
+    <Content Include="content\images\logoRathskeller.png" />
+    <Content Include="content\images\mk1.JPG" />
+    <Content Include="content\images\mk2.jpg" />
+    <Content Include="content\images\mk3.JPG" />
+    <Content Include="content\images\mk4.JPG" />
+    <Content Include="content\images\mojoe.png" />
+    <Content Include="content\images\newdaymeadery.png" />
+    <Content Include="content\images\testimage.jpg" />
+    <Content Include="content\images\testimage.png" />
+    <Content Include="content\images\tortasguicho.png" />
+    <Content Include="content\images\yats.png" />
+    <Content Include="content\styles.css" />
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.less" />
+    <Content Include="content\toastr.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="success.html" />
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="scripts\angular-animate.js" />
+    <Content Include="scripts\angular-animate.min.js" />
+    <Content Include="scripts\angular-route.js" />
+    <Content Include="scripts\angular-route.min.js" />
+    <Content Include="scripts\angular-sanitize.js" />
+    <Content Include="scripts\angular-sanitize.min.js" />
+    <Content Include="scripts\angular.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\angular-route.min.js.map" />
+    <Content Include="scripts\angular-animate.min.js.map" />
+    <Content Include="scripts\angular-sanitize.min.js.map" />
+    <Content Include="app\mail\docu\docu_formmail_de.pdf" />
+    <Content Include="app\mail\docu\docu_formmail_en.pdf" />
+    <Content Include="app\mail\inc\font\daft.ttf" />
+    <Content Include="app\mail\logfile\.htaccess" />
+    <Content Include="app\mail\logfile\chmod 777 logfile.txt and chmod 777 logs" />
+    <Content Include="app\mail\templates\.htaccess" />
+    <None Include="My Project\PublishProfiles\Kate and Max.pubxml" />
+    <None Include="scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="scripts\angular-mocks.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-2.0.3.js" />
+    <Content Include="scripts\jquery-2.0.3.min.js" />
+    <Content Include="scripts\jquery.backstretch.min.js" />
+    <Content Include="scripts\moment.js" />
+    <Content Include="scripts\moment.min.js" />
+    <Content Include="scripts\spin.js" />
+    <Content Include="scripts\spin.min.js" />
+    <Content Include="scripts\toastr.js" />
+    <Content Include="scripts\toastr.min.js" />
+    <Content Include="scripts\ui-bootstrap-0.7.0.js" />
+    <Content Include="scripts\ui-bootstrap-0.7.0.min.js" />
+    <Content Include="scripts\ui-bootstrap-tpls-0.7.0.js" />
+    <Content Include="scripts\ui-bootstrap-tpls-0.7.0.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="scripts\jquery-2.0.3.min.map" />
+    <Content Include="scripts\toastr.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\mail\temp\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\font\fontawesome-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\font\fontawesome-webfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\font\fontawesome-webfont.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\font\FontAwesome.otf" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61894</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50016/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
