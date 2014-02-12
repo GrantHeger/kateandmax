@@ -1,0 +1,57 @@
+.opaque {
+    opacity: .7;
+}
+
+.notopaque {
+    opacity: .7;
+}
+
+.fancyFont {
+    font-family: 'Tangerine', cursive;
+}
+
+.fancyFont h1 {
+    font-size: 70px;
+    line-height: 75px;
+    font-weight: 600;
+}
+
+.fancyFont h2 {
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 500;
+}
+.widget.wfallgray {
+    padding-bottom: 1px;
+}
+.widget.wfallgray .widget-head {
+        background-color: #595959;
+        border: 1px solid #D3B780;
+        color: #fff;
+    }   
+.widget.wfallgray .widget-content .hide {
+    display: none;
+}
+
+.widget.wlogo .widget-content {
+    border-top: 1px solid #D3B780;
+}
+
+.widget.wfalltan .widget-head {
+        background-color: #FFBA75;
+        border: 1px solid #A6A6A6;
+        color: #A6A6A6;
+    }   
+#C33D03
+
+.widget.wfallorange {
+    padding-bottom: 1px;
+}
+.widget.wfallorange .widget-head {
+        background-color: #C33D03;
+        border: 1px solid #D3B780;
+        color: #fff;
+    }   
+.widget.wfallorange .widget-content .hide {
+    display: none;
+}

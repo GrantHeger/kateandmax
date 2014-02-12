@@ -1,0 +1,6 @@
+﻿.bgImage {
+    width: 100%;
+    height: auto;
+    content: "http://answerphoto.com/kateandmax/content/images/testimage.png";
+    -webkit-filter: blur(4px) brightness(1.6) grayscale(0.5);
+}
